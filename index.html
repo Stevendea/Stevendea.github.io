@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset = "utf-8" />
+    <title>Page Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div class = "container">
+
+        <div class="nav-wrapper">
+
+            <div class="left-side">
+
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="index.html">Home</a>
+                </div>
+                
+                <div class="nav-link-wrapper">
+                    <a href="aboutme.html">About Me</a>
+                </div>
+
+            </div>
+
+            <div class="right-side">
+
+                <div class="brand">
+                    <div>STEVEN DEA</div>
+                </div>
+
+            </div>     
+
+        </div>
+        
+        <div class="content-wrapper">
+
+            <div class="portfolio-items-wrapper">
+
+                <div class="portfolio-item-wrapper">
+
+                    <div class="portfolio-img-background" style="background-image:url(images/dna.jpg)"></div>
+
+                    <div class="image-text-wrapper">
+
+                        <div class="logo-wrapper">
+                            <img src="logos/BioinformaticsLogo2.png" alt="">
+                        </div>
+
+                        <div class="subtitle">
+                            Bioinformatics Portfolio
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="portfolio-item-wrapper">
+
+                    <div class="portfolio-img-background" style="background-image:url(images/Neurons.jpg)"></div>
+
+                    <div class="image-text-wrapper">
+
+                        <div class="logo-wrapper">
+                            <img src="logos/BiologyLogo2.png" alt="">
+                        </div>
+
+                        <div class="subtitle">
+                            Wetlab Biology Experience
+                        </div>
+
+                    </div>
+
+                </div>
+                
+
+                <div class="portfolio-item-wrapper">
+
+                    <div class="portfolio-img-background" style="background-image:url(images/code.jpg)"></div>
+
+                    <div class="image-text-wrapper">
+
+                        <div class="logo-wrapper">
+                            <img src="logos/ComputerScience2.png" alt="">
+                        </div>
+
+                        <div class="subtitle">
+                            Coding Projects in Python, C++, Java, and SQL
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', () => {
+           console.log(portfolioItem.childNodes[1].classList);
+           portfolioItem.childNodes[1].classList.add('img-darken');
+        })
+        portfolioItem.addEventListener('mouseout', () => {
+           console.log(portfolioItem.childNodes[1].classList);
+           portfolioItem.childNodes[1].classList.remove('img-darken');
+        })
+    })
+</script>
+
+</html>
