@@ -1,6 +1,7 @@
 /* Master Styles */
 body {
     margin: 0px;
+    background-color: whitesmoke;
     font-family: "Lato", sans-serif;
 }
 
@@ -58,11 +59,13 @@ body {
 /* Portfolio Styles */
 .portfolio-items-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    padding: 5px 5px 5px 5px;
+    grid-template-columns: 1fr 1fr;
 }
 
 .portfolio-item-wrapper {
     position: relative;
+    padding: 2px 2px 2px 2px;
 }
 
 .portfolio-img-background {
@@ -98,9 +101,26 @@ body {
     color: transparent;
 }
 
+.image-text-wrapper .subtitle a {
+    transition: 1s;
+    font-weight: 600;
+    text-decoration: none;
+    color: transparent;
+}
+
 .image-text-wrapper:hover .subtitle {
     font-weight: 600;
     color: lightskyblue;
+}
+
+.image-text-wrapper:hover .subtitle a {
+    font-weight: 600;
+    text-decoration: none;
+    color: lightskyblue;
+}
+
+.image-text-wrapper .subtitle .programming-links {
+    top: 50px;
 }
 
 .img-darken {
